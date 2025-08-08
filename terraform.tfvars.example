@@ -1,0 +1,38 @@
+# Example Terraform Variables
+# Copy this file to terraform.tfvars and customize the values
+
+# Azure Configuration
+azure_tenant_id = "12345678-1234-1234-1234-123456789abc"
+
+# Feature Flags
+enable_scim = true
+enable_abac = false
+
+# Test Users Configuration
+test_users = [
+  {
+    username   = "NikkiWolf"
+    first_name = "Nikki"
+    last_name  = "Wolf"
+    email      = "nikkiwolf@example.org"
+    department = "IT"
+    title      = "Regional Admin"
+  },
+  {
+    username   = "RichRoe"
+    first_name = "Richard"
+    last_name  = "Roe"
+    email      = "richroe@example.org"
+    department = "Finance"
+    title      = "Analyst"
+  }
+]
+
+# Common Tags
+common_tags = {
+  Project     = "aws-bedrock-azure-sso"
+  Environment = "production"
+  ManagedBy   = "terraform"
+  Owner       = "platform-team"
+  CostCenter  = "IT-Infrastructure"
+}
